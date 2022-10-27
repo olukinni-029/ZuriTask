@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 
@@ -15,13 +16,13 @@ const user={
     bio:"Ambitious, Smart, Hardworking, Optimistic, Mentally, Socially, and Emotionally Capable, always ready to learn. I'm a passionate Software Development, trying to change and add to my community through the tech world."
 }
 
-const port = 3540;
+const port= process.env.PORT||3000;
 
-app.get("/",(req,res)=>{
+app.get('/',(req,res)=>{
     res.send("Zuri First Task");
 });
 
-app.get("/user",(req,res)=>{
+app.get('/user',(req,res)=>{
 res.send(user);
 });
 
