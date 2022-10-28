@@ -12,7 +12,7 @@ app.use(cors({
 const user={
     "slackUsername":"OLUKINNI",
     "backend":true,
-    "age":"24",
+    "age":24,
     "bio":"Ambitious, Smart, Hardworking, Optimistic, Mentally, Socially, and Emotionally Capable, always ready to learn. I'm a passionate Software Development, trying to change and add to my community through the tech world."
 };
 
