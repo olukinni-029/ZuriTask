@@ -1,8 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const connectDB = require("./database/db");
-const Sample = require("./model/sample");
+
 
 
 const app = express();
@@ -12,7 +11,6 @@ app.use(cors({
     origin:"*"
 }));
 
-connectDB();
 
 const user={
     "slackUsername":"OLU",
