@@ -31,7 +31,7 @@ res.send(user);
 });
 
 
-app.post('/calculator', async (req, res) => {
+app.post('/', async (req, res) => {
     try {
       let { x, y, operation_type,slackUsername } = req.body;
       // use a switch operator to write a function that can add, multiply, subtract, or divide two numbers
