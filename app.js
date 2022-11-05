@@ -53,13 +53,8 @@ app.post('/calculator', async (req, res) => {
       };
       // use the function to calculate the result of 3 + 4
       const result = calculator(x, y, operation_type,slackUsername);
-    const sample = await Sample.create({
-        slackUsername,
-        result,
-        operation_type
-    })
       // send the result back to the client
-      return res.status(200).json({ message:"Sample Response Format",sample });
+      return res.status(200).json({slackUsername,result,operation_type});
     } catch (error) {
       console.log(error);
     }
