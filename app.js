@@ -65,10 +65,10 @@ app.post('/calculator', async (req, res) => {
     }
   });
 
-   app.get('/calculator',async (req,res)=>{
-    const sample = await Sample.find();
-    res.send(sample);
-   }) 
+//    app.get('/calculator',async (req,res)=>{
+//     const sample = await Sample.find();
+//     res.send(sample);
+//    }) 
 
 app.listen(port,()=>{
     console.log(`Server is running on http://localhost:${port}`);
