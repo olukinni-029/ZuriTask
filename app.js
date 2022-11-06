@@ -31,9 +31,9 @@ res.send(user);
 });
 
 
-app.post('/', async (req, res) => {
+app.post('/post', async (req, res) => {
     try {
-      let { x, y, operation_type,slackUsername } = req.body;
+      let { x, y, operation_type} = req.body;
       // use a switch operator to write a function that can add, multiply, subtract, or divide two numbers
       const calculator = (x, y, operation_type) => {
         switch (operation_type) {
@@ -43,14 +43,13 @@ app.post('/', async (req, res) => {
             return x - y;
           case 'multiplication':
             return x * y;
-          case 'divide':
-            return x / y;
           default:
             return 'Invalid operator';
         }
       };
       // use the function to calculate the result of 3 + 4
-      const result = calculator(x, y, operation_type,slackUsername);
+      const result = calculator(x, y, operation_type);
+      const slackUsername = user.slackUsername;
       // send the result back to the client
       return res.status(200).json({slackUsername,result,operation_type});
     } catch (error) {
